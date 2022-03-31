@@ -78,19 +78,6 @@ const MatxCustomizer = (props) => {
     const classes = useStyles()
     const { settings, updateSettings } = useSettings()
 
-    // const handleChange = (name, value) => {
-    //   let updatedSettings = set(settings, name, value);
-
-    //   updateSettings(updatedSettings);
-    // };
-
-    // const handleControlChange = (name) => (event) => {
-    //   let controlValue =
-    //     event.target.type === "checkbox"
-    //       ? event.target.checked
-    //       : event.target.value;
-    //   handleChange(name, controlValue);
-    // };
 
     const tooglePanel = () => {
         setOpen(!open)
@@ -108,7 +95,7 @@ const MatxCustomizer = (props) => {
                     className={clsx({ [classes.label]: true, open })}
                     onClick={tooglePanel}
                 >
-                    DEMOS
+                    THEME
                 </span>
             </Tooltip>
 
@@ -136,7 +123,7 @@ const MatxCustomizer = (props) => {
                                 onClick={tooglePanel}
                                 className={classes.customizerCloseButton}
                             >
-                                <Icon>close</Icon>
+                                {/* <Icon>close</Icon> */}
                             </IconButton>
                         </div>
                         <div className="px-6 mb-4 flex">
@@ -146,15 +133,9 @@ const MatxCustomizer = (props) => {
                                 onClick={() => handleTabChange(0)}
                                 className="mr-4"
                             >
-                                Demos
+                                Theme
                             </Button>
-                            <Button
-                                variant="outlined"
-                                color={tabIndex === 1 ? 'secondary' : 'primary'}
-                                onClick={() => handleTabChange(1)}
-                            >
-                                Settings
-                            </Button>
+    
                         </div>
 
                         <Scrollbar
@@ -207,169 +188,7 @@ const MatxCustomizer = (props) => {
                                 </div>
                             )}
 
-                            {/* END LAYOUT */}
 
-                            {tabIndex === 1 && (
-                                <div>
-                                    <div className={classes.helpText}>
-                                        We used React context API to control
-                                        layout. Check out the{' '}
-                                        <Link
-                                            href="http://demos.ui-lib.com/matx-react-doc/layout.html"
-                                            target="_blank"
-                                        >
-                                            Documentation
-                                        </Link>
-                                    </div>
-                                    {/* <div className="mb-4 mx-2">
-                    <div className="text-muted mb-4">Main theme</div>
-                    <div className="flex flex-wrap m--2">
-                      {mainThemes.map((color, i) => (
-                        <Tooltip key={i} title={color} placement="top">
-                          <div
-                            className="flex justify-center items-center h-40 w-40 border-radius-4 m-2 cursor-pointer elevation-z3"
-                            onClick={() =>
-                              updateSettings({ activeTheme: color })
-                            }
-                            style={{
-                              backgroundColor:
-                                themeColors[color].palette.primary.main,
-                            }}
-                          >
-                            {settings.activeTheme === color && (
-                              <Icon>done</Icon>
-                            )}
-                            <div
-                              className={settings.themes[color].palette.type}
-                            ></div>
-                          </div>
-                        </Tooltip>
-                      ))}
-                    </div>
-                  </div> */}
-
-                                    {/* {settings.activeLayout === "layout1" && (
-                    <Layout1Customizer
-                      settings={settings}
-                      handleChange={handleChange}
-                      handleControlChange={handleControlChange}
-                    />
-                  )}
-
-                  {settings.activeLayout === "layout2" && (
-                    <Layout2Customizer
-                      settings={settings}
-                      handleChange={handleChange}
-                      handleControlChange={handleControlChange}
-                    />
-                  )} */}
-
-                                    {/* <div className="mx-2 mb-6">
-                    <FormControl component="fieldset">
-                      <FormLabel component="legend">Footer</FormLabel>
-                      <FormGroup>
-                        <FormControlLabel
-                          control={
-                            <Switch
-                              checked={get(settings.footer, "show")}
-                              onChange={handleControlChange("footer.show")}
-                            />
-                          }
-                          label="Show"
-                        />
-
-                        <FormControlLabel
-                          control={
-                            <Switch
-                              checked={get(
-                                settings.layout1Settings.footer,
-                                "fixed"
-                              )}
-                              onChange={handleControlChange("footer.fixed")}
-                            />
-                          }
-                          label="Fixed"
-                        />
-                      </FormGroup>
-                    </FormControl>
-                  </div> */}
-
-                                    {/* <div className="mx-2 mb-6">
-                    <FormControl component="fieldset">
-                      <FormLabel component="legend">
-                        Secondary sidebar
-                      </FormLabel>
-                      <FormGroup>
-                        <FormControlLabel
-                          control={
-                            <Switch
-                              checked={get(settings.secondarySidebar, "show")}
-                              onChange={handleControlChange(
-                                "secondarySidebar.show"
-                              )}
-                            />
-                          }
-                          label="Show"
-                        />
-                      </FormGroup>
-                    </FormControl>
-                  </div> */}
-
-                                    {/* <div className="mb-4 mx-2">
-                    <div className="text-muted mb-4">
-                      Secondary sidebar theme
-                    </div>
-                    <div className="flex flex-wrap m--2">
-                      {topbarThemes.map((color, i) => (
-                        <Tooltip key={i} title={color} placement="top">
-                          <div
-                            className="flex justify-center items-center h-40 w-40 border-radius-4 m-2 cursor-pointer elevation-z3"
-                            onClick={() =>
-                              handleChange("secondarySidebar.theme", color)
-                            }
-                            style={{
-                              backgroundColor:
-                                themeColors[color].palette.primary.main,
-                            }}
-                          >
-                            {settings.secondarySidebar.theme === color && (
-                              <Icon>done</Icon>
-                            )}
-                            <div
-                              className={settings.themes[color].palette.type}
-                            ></div>
-                          </div>
-                        </Tooltip>
-                      ))}
-                    </div>
-                  </div> */}
-
-                                    {/* <div className="mb-4 mx-2">
-                    <div className="text-muted mb-4">Footer theme</div>
-                    <div className="flex flex-wrap m--2">
-                      {topbarThemes.map((color, i) => (
-                        <Tooltip key={i} title={color} placement="top">
-                          <div
-                            className="flex justify-center items-center h-40 w-40 border-radius-4 m-2 cursor-pointer elevation-z3"
-                            onClick={() => handleChange("footer.theme", color)}
-                            style={{
-                              backgroundColor:
-                                themeColors[color].palette.primary.main,
-                            }}
-                          >
-                            {settings.footer.theme === color && (
-                              <Icon>done</Icon>
-                            )}
-                            <div
-                              className={settings.themes[color].palette.type}
-                            ></div>
-                          </div>
-                        </Tooltip>
-                      ))}
-                    </div>
-                  </div> */}
-                                </div>
-                            )}
                         </Scrollbar>
                     </div>
                 </Drawer>
@@ -469,7 +288,7 @@ const demoLayouts = [
     {
         name: 'Horizontal Navigation',
         thumbnail: '/assets/images/screenshots/layout4-customizer.png',
-        isPro: true,
+        isPro: false,
         options: {
             activeLayout: 'layout2',
             activeTheme: 'purple1',

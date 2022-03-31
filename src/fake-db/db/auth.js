@@ -8,10 +8,10 @@ const userList = [
     {
         id: 1,
         role: 'SA',
-        name: 'administrator',
-        username: 'administrator',
+        name: 'admin',
+        username: 'admin',
         email: 'admin@wdti.com',
-        avatar: '/assets/images/face-6.jpg',
+        avatar: '/assets/images/user.jpg',
         age: 25,
     },
 ]

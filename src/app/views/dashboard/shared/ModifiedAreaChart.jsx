@@ -52,11 +52,11 @@ const defaultOption = {
     },
     yAxis: {
         type: 'value',
-        min: 10,
-        max: 60,
+        min: 1000,
+        max: 100000,
         axisLabel: {
             color: '#ccc',
-            margin: 20,
+            margin: -10,
             fontSize: 13,
             fontFamily: 'roboto',
         },

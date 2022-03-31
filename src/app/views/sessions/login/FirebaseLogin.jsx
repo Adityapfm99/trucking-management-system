@@ -8,7 +8,6 @@ import {
     CircularProgress,
 } from '@material-ui/core'
 import { TextValidator, ValidatorForm } from 'react-material-ui-form-validator'
-import { MatxLogo, MatxDivider } from 'app/components'
 import { makeStyles } from '@material-ui/core/styles'
 import history from 'history.js'
 import clsx from 'clsx'
@@ -101,22 +100,11 @@ const FirebaseLogin = () => {
         setUserInfo(temp)
     }
 
-    // const handleFormSubmit = async (event) => {
-    //     setLoading(true)
-    //     // console.log(userInfo);
-    //     try {
-    //         await signInWithEmailAndPassword(userInfo.email, userInfo.password)
-    //         history.push('/')
-    //     } catch (e) {
-    //         console.log(e)
-    //         setMessage(e.message)
-    //         setLoading(false)
-    //     }
-    // }
     const handleFormSubmit = async (event) => {
         setLoading(true)
+        // console.log(userInfo);
         try {
-            // await login(userInfo.email, userInfo.password)
+            await signInWithGoogle(userInfo.email, userInfo.password)
             history.push('/')
         } catch (e) {
             console.log(e)
@@ -124,6 +112,17 @@ const FirebaseLogin = () => {
             setLoading(false)
         }
     }
+    // const handleFormSubmit = async (event) => {
+    //     setLoading(true)
+    //     try {
+    //         await login(userInfo.email, userInfo.password)
+    //         history.push('/')
+    //     } catch (e) {
+    //         console.log(e)
+    //         setMessage(e.message)
+    //         setLoading(false)
+    //     }
+    // }
     const handleGoogleLogin = async (event) => {
         try {
             await signInWithGoogle()

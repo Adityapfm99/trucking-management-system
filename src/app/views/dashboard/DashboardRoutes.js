@@ -17,6 +17,11 @@ const dashboardRoutes = [
         component: React.lazy(() => import('./InventoryManagement')),
         auth: authRoles.admin,
     },
+    {
+        path: '/dashboard/monitoring-vehicle',
+        component: React.lazy(() => import('./MonitoringVehicle')),
+        auth: authRoles.admin,
+    },
 ]
 
 export default dashboardRoutes

@@ -6,6 +6,11 @@ const crudRoute = [
         exact: true,
         component: React.lazy(() => import('./CrudTable')),
     },
+    {
+        path: '/master-driver',
+        exact: true,
+        component: React.lazy(() => import('./MasterDriver')),
+    },
 ]
 
 export default crudRoute

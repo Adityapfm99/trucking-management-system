@@ -49,9 +49,9 @@ const SecondarySidebarContent = () => {
 
             <MatxCustomizer />
 
-            <ShoppingCart />
+            {/* <ShoppingCart /> */}
 
-            <ChatHead
+            {/* <ChatHead
                 icon={
                     <IconButton className="my-3" size="small">
                         <Icon>comments</Icon>
@@ -59,7 +59,7 @@ const SecondarySidebarContent = () => {
                 }
             >
                 <Chatbox />
-            </ChatHead>
+            </ChatHead> */}
 
             <span className="m-auto"></span>
         </div>

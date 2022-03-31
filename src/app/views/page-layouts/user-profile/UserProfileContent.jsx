@@ -136,67 +136,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
                         </Card>
                     </Grid>
 
-                    <Grid item lg={4} md={4} sm={12} xs={12}>
-                        <Card className="p-4 h-full">
-                            <h4 className="font-medium text-muted pb-6 pb-0 mb-6">
-                                Contacts
-                            </h4>
-                            <div className="flex items-center mb-4">
-                                <Badge badgeContent="New" color="primary">
-                                    <Fab className="bg-light-primary box-shadow-none overflow-hidden">
-                                        <h4 className="text-primary m-0 font-normal">
-                                            MR
-                                        </h4>
-                                    </Fab>
-                                </Badge>
-                                <div className="ml-4">
-                                    <h5 className="m-0 mb-1 font-medium">
-                                        Watson Joyce
-                                    </h5>
-                                    <p className="m-0 text-muted">London</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center mb-4">
-                                <Fab className="bg-light-green box-shadow-none overflow-hidden">
-                                    <h4 className="text-green m-0 font-normal">
-                                        WT
-                                    </h4>
-                                </Fab>
-                                <div className="ml-4">
-                                    <h5 className="m-0 mb-1 font-medium">
-                                        Watson Joyce
-                                    </h5>
-                                    <p className="m-0 text-muted">London</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center mb-4">
-                                <Fab className="bg-light-error box-shadow-none overflow-hidden">
-                                    <h4 className="text-error m-0 font-normal">
-                                        RY
-                                    </h4>
-                                </Fab>
-                                <div className="ml-4">
-                                    <h5 className="m-0 mb-1 font-medium">
-                                        Watson Joyce
-                                    </h5>
-                                    <p className="m-0 text-muted">London</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center">
-                                <Fab className="bg-light-primary box-shadow-none overflow-hidden">
-                                    <h4 className="text-error m-0 font-normal">
-                                        MR
-                                    </h4>
-                                </Fab>
-                                <div className="ml-4">
-                                    <h5 className="m-0 mb-1 font-medium">
-                                        Watson Joyce
-                                    </h5>
-                                    <p className="m-0 text-muted">London</p>
-                                </div>
-                            </div>
-                        </Card>
-                    </Grid>
+                   
 
                     <Grid item lg={8} md={8} sm={12} xs={12}>
                         <div className="py-3"></div>
@@ -220,43 +160,11 @@ const UserProfileContent = ({ toggleSidenav }) => {
                                 </IconButton>
                                 <p className="m-0">65</p>
                             </div>
+                            
                             <div className="flex-grow">
                                 <div className="flex items-center justify-between pr-4 pb-3">
                                     <h5 className="m-0 font-medium capitalize">
-                                        update profile picture
-                                    </h5>
-                                    <span className="text-muted">
-                                        12/03/2019
-                                    </span>
-                                </div>
-                                <Divider className="mb-4"></Divider>
-                                <div className={classes.cardGrayBox}>
-                                    <img
-                                        className="h-full w-full border-radius-4"
-                                        src="/assets/images/photo-1.jpg"
-                                        alt="random"
-                                    />
-                                </div>
-                            </div>
-                        </Card>
-                        <div className="py-7"></div>
-                        <Card className="overflow-unset flex py-4">
-                            <div className="w-100 min-w-100 text-center">
-                                <Fab
-                                    className={clsx(
-                                        'relative mt--14',
-                                        classes.cardLeftVerticalLine
-                                    )}
-                                    size="medium"
-                                    color="primary"
-                                >
-                                    <Icon>star_outline</Icon>
-                                </Fab>
-                            </div>
-                            <div className="flex-grow">
-                                <div className="flex items-center justify-between pr-4 pb-3">
-                                    <h5 className="m-0 font-medium capitalize">
-                                        bought air ticket
+                                        Delivery Send
                                     </h5>
                                     <span className="text-muted">
                                         12/03/2019
@@ -264,10 +172,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
                                 </div>
                                 <Divider></Divider>
                                 <p className="m-0 pt-3">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s
+                                    Total Load 2.100 Kg
                                 </p>
                             </div>
                         </Card>
@@ -288,7 +193,7 @@ const UserProfileContent = ({ toggleSidenav }) => {
                             <div className="flex-grow">
                                 <div className="flex items-center justify-between pr-4 pb-3">
                                     <h5 className="m-0 font-medium capitalize">
-                                        timeline box title
+                                        Maintenance Vehicle
                                     </h5>
                                     <span className="text-muted">
                                         12/03/2019
@@ -296,45 +201,13 @@ const UserProfileContent = ({ toggleSidenav }) => {
                                 </div>
                                 <Divider></Divider>
                                 <p className="m-0 pt-3">
-                                    Lorem Ipsum is simply dummy text of the
-                                    printing and typesetting industry. Lorem
-                                    Ipsum has been the industry's standard dummy
-                                    text ever since the 1500s
+                                    Routine Maintenance vehicle
                                 </p>
                             </div>
                         </Card>
                     </Grid>
 
-                    <Grid item lg={4} md={4} sm={12} xs={12}>
-                        <Card>
-                            {paymentList.map((method, index) => (
-                                <Fragment key={index}>
-                                    <div className="py-4 px-6 flex flex-wrap items-center justify-between">
-                                        <div className="flex flex-wrap items-center">
-                                            <div className="flex justify-center items-center bg-gray w-64 h-52 border-radius-4">
-                                                <img
-                                                    className="w-36 overflow-hidden"
-                                                    src={method.img}
-                                                    alt="master card"
-                                                />
-                                            </div>
-                                            <div className="ml-4">
-                                                <h5 className="mb-1 font-medium">
-                                                    {method.type}
-                                                </h5>
-                                                <span className="text-muted">
-                                                    {method.product}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    {index !== paymentList.length - 1 && (
-                                        <Divider />
-                                    )}
-                                </Fragment>
-                            ))}
-                        </Card>
-                    </Grid>
+           
                 </Grid>
                 <div className="py-2"></div>
             </div>
@@ -344,16 +217,16 @@ const UserProfileContent = ({ toggleSidenav }) => {
 
 const projectSummery = [
     {
-        title: 'Project Created',
-        amount: 11,
+        title: 'Total Load Delivery',
+        amount: '15.000 KG',
     },
     {
-        title: 'Project Completed',
-        amount: 15,
+        title: 'Total Cost Expense',
+        amount: 'IDR 7.500.000',
     },
     {
-        title: 'Project Published',
-        amount: 25,
+        title: 'Driver Rank',
+        amount: 2,
     },
 ]
 

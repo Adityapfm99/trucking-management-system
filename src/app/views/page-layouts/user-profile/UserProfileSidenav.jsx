@@ -25,17 +25,7 @@ const UserProfileSidenav = () => {
             />
             <p className="text-white">{user.name}</p>
             <div className="py-3" />
-            <div className="flex flex-wrap w-full px-12 mb-11">
-                <div className="flex-grow">
-                    <p className="uppercase text-light-white mb-1">balance</p>
-                    <h4 className="font-medium text-white">$ 20,495</h4>
-                </div>
-                <div>
-                    <p className="uppercase text-light-white mb-1">points</p>
-                    <h4 className="font-medium text-white">PT 3,000</h4>
-                </div>
-                <div />
-            </div>
+         
             <div className="px-8 pt-2 bg-default">
                 <Grid container spacing={3}>
                     <Grid item>
@@ -58,16 +48,7 @@ const UserProfileSidenav = () => {
                             </Card>
                         </Grid>
                     ))}
-                </Grid>
-                <div className="py-4" />
-                <div className="flex items-center justify-center text-primary">
-                    <Button>
-                        <Icon>sentiment_very_satisfied</Icon>
-                        <h5 className="ml-8 text-primary font-medium mb-0">
-                            Upgrade to premium
-                        </h5>
-                    </Button>
-                </div>
+                </Grid>=
                 <div className="py-2"></div>
             </div>
         </div>

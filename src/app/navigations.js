@@ -3,18 +3,75 @@ import { authRoles } from './auth/authRoles'
 export const navigations = [
     {
         name: 'Dashboard',
-        path: '/dashboard/default',
+        path: '/dashboard/alternative',
         icon: 'dashboard',
     },
-    {
-        name: 'Alternative',
-        path: '/dashboard/alternative',
-        icon: 'analytics',
-    },
+    // {
+    //     name: 'Alternative',
+    //     path: '/dashboard/alternative',
+    //     icon: 'analytics',
+    // },
     {
         name: 'Inventory Management',
         path: '/dashboard/inventory-management',
-        icon: 'store',
+        icon: 'monitoring',
+    },
+    {
+        name: 'Monitoring Vehicle',
+        path: '/dashboard/monitoring-vehicle',
+        icon: 'monitoring',
+    },
+    {
+        name: 'Master',
+        icon: 'settings',
+        children: [
+            {
+                name: 'Master Driver',
+                path: '/master-driver', 
+                iconText: 'CL',
+            },
+            {
+                name: 'Master Vehicle',
+                path: '/pages/view-customer',
+                iconText: 'VC',
+            },
+            {
+                name: 'Master Supplier',
+                path: '/pages/view-customer',
+                iconText: 'VC',
+            },
+            {
+                name: 'Master Item Service',
+                path: '/pages/new-customer',
+                iconText: 'NC',
+            },
+        ],
+    },
+    {
+        name: 'Service',
+        icon: 'build',
+        children: [
+            {
+                name: 'Service Record Vehicle',
+                path: '/pages/customer-list',
+                iconText: 'CL',
+            },
+            {
+                name: 'Master Vehicle',
+                path: '/pages/view-customer',
+                iconText: 'VC',
+            },
+            {
+                name: 'Master Supplier',
+                path: '/pages/view-customer',
+                iconText: 'VC',
+            },
+            {
+                name: 'Master Item Service',
+                path: '/pages/new-customer',
+                iconText: 'NC',
+            },
+        ],
     },
     {
         label: 'Pages',
@@ -244,10 +301,10 @@ export const navigations = [
         icon: 'person',
     },
 
-    {
-        label: 'Apps',
-        type: 'label',
-    },
+    // {
+    //     label: 'Apps',
+    //     type: 'label',
+    // },
     {
         name: 'Ecommerce',
         icon: 'shopping_basket',

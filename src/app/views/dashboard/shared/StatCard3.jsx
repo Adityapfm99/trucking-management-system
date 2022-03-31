@@ -15,7 +15,7 @@ const StatCard3 = () => {
         },
         {
             icon: 'local_shipping',
-            amount: 12000 + ' kg',
+            amount: 181000 + ' kg',
             title: 'Total Payload',
         },
         {

@@ -14,6 +14,7 @@ import GaugeProgressCard from './shared/GuageProgressCard'
 import FollowerCard from './shared/FollowerCard'
 import FollowerCard2 from './shared/FollowerCard2'
 import StatCards from './shared/StatCards'
+import DoughnutChart from './shared/Doughnut'
 
 const Analytics2 = () => {
     return (
@@ -36,7 +37,7 @@ const Analytics2 = () => {
             <StatCard3 />
 
             <Card className="mt-5 mb-6" elevation={3}>
-                <div className=" px-4 py-3 mb-6 flex justify-between items-center bg-light-gray">
+                <div className=" px-4 py-3 mb-6 flex justify-between items-center bg-light-blue">
                     <span className="font-medium text-muted">Driver Performance</span>
                     
                     <IconButton size="small">
@@ -48,7 +49,10 @@ const Analytics2 = () => {
                     <Grid item lg={8} md={8} sm={12} xs={12}>
                     <ComparisonChart2 height={200} />
                 </Grid>
+           
+               
                 </Grid>
+                
                
             </Card>
 
