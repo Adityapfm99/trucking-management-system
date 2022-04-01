@@ -11,11 +11,11 @@ export const navigations = [
     //     path: '/dashboard/alternative',
     //     icon: 'analytics',
     // },
-    {
-        name: 'Inventory Management',
-        path: '/dashboard/inventory-management',
-        icon: 'monitoring',
-    },
+    // {
+    //     name: 'Inventory Management',
+    //     path: '/dashboard/inventory-management',
+    //     icon: 'monitoring',
+    // },
     {
         name: 'Monitoring Vehicle',
         path: '/dashboard/monitoring-vehicle',
@@ -32,7 +32,7 @@ export const navigations = [
             },
             {
                 name: 'Master Vehicle',
-                path: '/pages/view-customer',
+                path: '/master-vehicle', 
                 iconText: 'VC',
             },
             {
@@ -52,7 +52,7 @@ export const navigations = [
         icon: 'build',
         children: [
             {
-                name: 'Service Record Vehicle',
+                name: 'Service Record',
                 path: '/pages/customer-list',
                 iconText: 'CL',
             },

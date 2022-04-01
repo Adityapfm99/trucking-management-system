@@ -1,72 +1,74 @@
 import React, { useState, useEffect } from 'react'
-import {
-    Dialog,
-    Button,
-    Grid,
-    FormControlLabel,
-    Switch,
-} from '@material-ui/core'
 import { ValidatorForm, TextValidator } from 'react-material-ui-form-validator'
-import { getUserById, updateUser, addNewUser } from './TableService'
-import { generateRandomId } from 'utils'
+import {
+    Button,
+    Icon,
+    Grid,
+    Radio,
+    RadioGroup,
+    FormControlLabel,
+    Checkbox,
+} from '@material-ui/core'
+import { Link, useParams } from 'react-router-dom'
+import {
+    MuiPickersUtilsProvider,
+    KeyboardDatePicker,
+} from '@material-ui/pickers'
+import 'date-fns'
+import DateFnsUtils from '@date-io/date-fns'
+import DropdownDriver from './dropDownDriver'
 
-const AddDriver = ({ uid, open, handleClose }) => {
+const AddDriver = () => {
     const [state, setState] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        balance: '',
-        age: '',
-        company: '',
-        address: '',
-        isActive: false,
+        date: new Date(),
     })
 
-    const handleChange = (event, source) => {
-        event.persist()
-        if (source === 'switch') {
-            setState({
-                ...state,
-                isActive: event.target.checked,
-            })
-            return
-        }
+    useEffect(() => {
+        ValidatorForm.addValidationRule('isPasswordMatch', (value) => {
+            console.log(value)
 
+            if (value !== state.password) {
+                return false
+            }
+            return true
+        })
+        return () => ValidatorForm.removeValidationRule('isPasswordMatch')
+    }, [state.password])
+
+    const handleSubmit = (event) => {
+        // console.log("submitted");
+        // console.log(event);
+    }
+
+    const handleChange = (event) => {
+        event.persist()
         setState({
             ...state,
             [event.target.name]: event.target.value,
         })
     }
 
-    const handleFormSubmit = () => {
-        let { id } = state
-        if (id) {
-            updateUser({
-                ...state,
-            }).then(() => {
-                handleClose()
-            })
-        } else {
-            addNewUser({
-                id: generateRandomId(),
-                ...state,
-            }).then(() => {
-                handleClose()
-            })
-        }
+    const handleDateChange = (date) => {
+        setState({ ...state, date })
     }
 
-    useEffect(() => {
-        getUserById(uid).then((data) => setState({ ...data.data }))
-    }, [uid])
+    const {
+        driverName,
+        nik,
+        creditCard,
+        mobile,
+        password,
+        vehicleName,
+        pic,
+        date,
+        email,
+    } = state
 
     return (
-        <Dialog onClose={handleClose} open={open}>
-            <div className="p-6">
-                <h4 className="mb-5">Add Data Driver</h4>
-                <ValidatorForm onSubmit={handleFormSubmit}>
-                    <Grid className="mb-4" container spacing={4}>
-                        <Grid item sm={6} xs={12}>
+        <div>
+            <ValidatorForm onSubmit={handleSubmit} onError={() => null}>
+                <Grid container spacing={4}>
+                <Grid item sm={6} xs={12}>
                             <TextValidator
                                 className="w-full mb-4"
                                 label="DriverName"
@@ -74,29 +76,19 @@ const AddDriver = ({ uid, open, handleClose }) => {
                                 type="text"
                                 name="driverName"
                                 value={state?.driverName}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
                             />
-                            <TextValidator
+                       <TextValidator
                                 className="w-full mb-4"
                                 label="nik"
                                 onChange={handleChange}
                                 type="text"
                                 name="nik"
                                 value={state?.nik}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
                             />
 
-                            <TextValidator
-                                className="w-full mb-4"
-                                label="VehicleName"
-                                onChange={handleChange}
-                                type="text"
-                                name="vehicleName"
-                                value={state?.vehicleName}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
+
+                            <DropdownDriver 
+                        
                             />
 
                             <TextValidator
@@ -106,77 +98,18 @@ const AddDriver = ({ uid, open, handleClose }) => {
                                 type="text"
                                 name="pic"
                                 value={state?.pic}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
                             />
-                        </Grid>
-
-                        <Grid item sm={6} xs={12}>
-                            {/* <TextValidator
-                                className="w-full mb-4"
-                                label="Age"
-                                onChange={handleChange}
-                                type="number"
-                                name="age"
-                                value={state?.age}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
-                            />
-                            <TextValidator
-                                className="w-full mb-4"
-                                label="Company"
-                                onChange={handleChange}
-                                type="text"
-                                name="company"
-                                value={state?.company}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
-                            />
-                            <TextValidator
-                                className="w-full mb-4"
-                                label="Address"
-                                onChange={handleChange}
-                                type="text"
-                                name="address"
-                                value={state?.address}
-                                validators={['required']}
-                                errorMessages={['this field is required']}
-                            /> */}
-
-                            <FormControlLabel
-                                className="my-5"
-                                control={
-                                    <Switch
-                                        checked={state?.isActive}
-                                        onChange={(event) =>
-                                            handleChange(event, 'switch')
-                                        }
-                                    />
-                                }
-                                label="Status"
-                            />
-                        </Grid>
                     </Grid>
 
-                    <div className="flex justify-between items-center">
-                        <Button
-                            variant="contained"
-                            color="primary"
-                            type="submit"
-                        >
-                            Save
-                        </Button>
-                        <Button
-                            variant="outlined"
-                            color="secondary"
-                            onClick={() => handleClose()}
-                        >
-                            Cancel
-                        </Button>
-                    </div>
-                </ValidatorForm>
-            </div>
-        </Dialog>
+       
+                </Grid>
+                <Button component={Link} to="/master-driver"  color="primary" variant="contained" type="submit">
+                    <Icon>send</Icon>
+                    <span className="pl-2 capitalize">Save</span>
+                </Button>
+            </ValidatorForm>
+            
+        </div>
     )
 }
 

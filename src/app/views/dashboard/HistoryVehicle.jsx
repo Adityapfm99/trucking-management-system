@@ -5,94 +5,104 @@ import { Breadcrumb } from 'app/components'
 import MUIDataTable from 'mui-datatables'
 import { Link } from 'react-router-dom'
 
-const monitoringVehicleList = [
+const historyList = [
     {
         vehicleName: 'MITSUBISHI, CANTER',
         driverName: 'DRIVER A',
         licensePlate: 'B 7710 QWE',
         status: 'inactive',
+        historyDate: '2022-04-01 09:00:00',
         fuel: 100,
         weight: 730,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER B',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7921 IOP',
+        historyDate: '2022-04-01 09:30:00',
         status: 'active',
         fuel: 90,
         weight: 770,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER C',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7121 GHB',
+        historyDate: '2022-04-01 10:00:00',
         status: 'active',
-        fuel: 110,
+        fuel: 80,
         weight: 810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER D',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7001 GWO',
+        historyDate: '2022-04-01 10:30:00',
         status: 'inactive',
-        fuel: 101,
+        fuel: 75,
         weight: 790,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER E',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7492 HJW',
         status: 'active',
-        fuel: 110,
+        historyDate: '2022-04-01 11:00:00',
+        fuel: 70,
         weight: 840,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER F',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7887 IOP',
         status: 'active',
-        fuel: 100,
+        historyDate: '2022-04-01 11:30:00',
+        fuel: 60,
         weight: 812,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER G',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7201 FGS',
         status: 'active',
-        fuel: 100,
+        historyDate: '2022-04-01 12:00:00',
+        fuel: 50,
         weight: 810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER H',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7769 UJI',
         status: 'active',
-        fuel: 80,
+        historyDate: '2022-04-01 12:30:00',
+        fuel: 40,
         weight: 833,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
-        driverName: 'DRIVER I',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7013 ULO',
         status: 'active',
-        fuel: 120,
+        historyDate: '2022-04-01 13:00:00',
+        fuel: 30,
         weight: 820,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'TOYOTA, DYNA',
-        driverName: 'DRIVER J',
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER A',
         licensePlate: 'B 7291 GHW',
         status: 'active',
-        fuel: 120,
+        historyDate: '2022-04-01 13:30:00',
+        fuel: 30,
         weight: 810,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
@@ -101,21 +111,60 @@ const monitoringVehicleList = [
         driverName: 'DRIVER K',
         licensePlate: 'B 7772 HUK',
         status: 'active',
-        fuel: 110,
+        historyDate: '2022-04-01 14:00:00',
+        fuel: 20,
+        weight: 823,
+        lastPosition: 'SPBU 3900 Kalimantan',
+    },
+    {
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER K',
+        licensePlate: 'B 7772 HUK',
+        status: 'active',
+        historyDate: '2022-04-01 14:30:00',
+        fuel: 10,
+        weight: 823,
+        lastPosition: 'SPBU 3900 Kalimantan',
+    },
+    {
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER K',
+        licensePlate: 'B 7772 HUK',
+        status: 'active',
+        historyDate: '2022-04-01 15:00:00',
+        fuel: 10,
+        weight: 823,
+        lastPosition: 'SPBU 3900 Kalimantan',
+    },
+    {
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER K',
+        licensePlate: 'B 7772 HUK',
+        status: 'active',
+        historyDate: '2022-04-01 15:30:00',
+        fuel: 10,
+        weight: 823,
+        lastPosition: 'SPBU 3900 Kalimantan',
+    },
+    {
+        vehicleName: 'MITSUBISHI, CANTER',
+        driverName: 'DRIVER K',
+        licensePlate: 'B 7772 HUK',
+        status: 'active',
+        historyDate: '2022-04-01 16:00:00',
+        fuel: 10,
         weight: 823,
         lastPosition: 'SPBU 3900 Kalimantan',
     },
 ]
 
-const MonitoringTable = () => {
+const HistoryTable = () => {
     const columns = [
         {
             name: 'vehicleName',
             label: 'Vehicle Name.',
             options: {
-                // customBodyRenderLite: (dataIndex) => (
-                //     <span className="ellipsis">{monitoringVehicleList[dataIndex].vehicleName}</span>
-                // ),
+    
                 filter: true,
             },
         },
@@ -126,16 +175,10 @@ const MonitoringTable = () => {
                 filter: true,
             },
         },
+
         {
-            name: 'licensePlate',
-            label: 'License Plate',
-            options: {
-                filter: true,
-            },
-        },
-        {
-            name: 'lastPosition',
-            label: 'Last Position',
+            name: 'historyDate',
+            label: 'History Date',
             options: {
                 filter: true,
             },
@@ -156,36 +199,6 @@ const MonitoringTable = () => {
         },
         
         {
-            name: 'status',
-            label: 'Sensor Status',
-            options: {
-                filter: true,
-                customBodyRenderLite: (dataIndex) => {
-                    let status = monitoringVehicleList[dataIndex].status
-
-                    switch (status) {
-                        case 'active':
-                            return (
-                                <small className="capitalize text-white bg-green border-radius-4 px-2 py-2px">
-                                    {status}
-                                </small>
-                            )
-                       
-                        case 'inactive':
-                            return (
-                                <small className="capitalize text-white bg-error border-radius-4 px-2 py-2px">
-                                    {status}
-                                </small>
-                            )
-
-                        default:
-                            break
-                    }
-                },
-            },
-        },
-       
-        {
             name: 'action',
             label: 'Action',
             options: {
@@ -193,33 +206,16 @@ const MonitoringTable = () => {
                 customBodyRenderLite: (dataIndex) => (
                     <div className="flex items-center">
                         {/* <div className="flex-grow"></div> */}
-                        <Link to={`/map`}>
-                        <Tooltip title="Live Location">
+                        <Link to={`/dashboard/monitoring-vehicle`}>
+                        <Tooltip title="Back">
                             <IconButton>
-                                <Icon className="text-red" fontSize="medium">
-                                    location_on
+                                <Icon className="text-red" fontSize="medium" color = "error">
+                                    arrow_back
                                 </Icon>
                             </IconButton>
                         </Tooltip>
                         </Link>
-                        <Link to={`/invoice/${monitoringVehicleList[dataIndex]._id}`}>
-                            <Tooltip title="Video cam">
-                                <IconButton>
-                                    <Icon fontSize="medium" color ="primary">
-                                        videocam
-                                    </Icon>
-                                </IconButton>
-                            </Tooltip>
-                        </Link>
-                        <Link to={`/dashboard/history-vehicle`}>
-                            <Tooltip title="History">
-                                <IconButton>
-                                    <Icon fontSize="medium" color ="primary">
-                                        visibility
-                                    </Icon>
-                                </IconButton>
-                            </Tooltip>
-                        </Link>
+                        
                     </div>
                 ),
             },
@@ -232,15 +228,16 @@ const MonitoringTable = () => {
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Pages', path: '/pages' },
-                        { name: 'Monitoring Vehicle' },
+                        { name: 'History Vehicle' },
                     ]}
                 />
             </div>
             <div className="overflow-auto">
                 <div className="min-w-750">
                     <MUIDataTable
-                        title={'Monitoring'}
-                        data={monitoringVehicleList}
+                        title={'Vehicle B 7710 QWE - 2022-04-01'}
+                        
+                        data={historyList}
                         columns={columns}
                         options={{
                             // filterType: 'textField',
@@ -298,4 +295,4 @@ const MonitoringTable = () => {
     )
 }
 
-export default MonitoringTable
+export default HistoryTable
