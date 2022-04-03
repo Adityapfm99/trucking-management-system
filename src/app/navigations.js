@@ -3,7 +3,7 @@ import { authRoles } from './auth/authRoles'
 export const navigations = [
     {
         name: 'Dashboard',
-        path: '/dashboard/alternative',
+        path: '/dashboard/dashboard-viewer',
         icon: 'dashboard',
     },
     // {
@@ -26,23 +26,23 @@ export const navigations = [
         icon: 'settings',
         children: [
             {
-                name: 'Master Driver',
+                name: 'Master Driver List',
                 path: '/master-driver', 
                 iconText: 'CL',
             },
             {
-                name: 'Master Vehicle',
+                name: 'Master Vehicle List',
                 path: '/master-vehicle', 
                 iconText: 'VC',
             },
             {
-                name: 'Master Supplier',
-                path: '/pages/view-customer',
+                name: 'Master Supplier List',
+                path: '/master-supplier',
                 iconText: 'VC',
             },
             {
-                name: 'Master Item Service',
-                path: '/pages/new-customer',
+                name: 'Master Item Service List',
+                path: '/master-item',
                 iconText: 'NC',
             },
         ],
@@ -52,25 +52,54 @@ export const navigations = [
         icon: 'build',
         children: [
             {
-                name: 'Service Record',
+                name: 'Service Record List',
+                path: '/service-record',
+                iconText: 'CL',
+            },
+            {
+                name: 'Service Reminder',
+                path: '/service-reminder',
+                iconText: 'VC',
+            },
+            // {
+            //     name: 'Master Supplier',
+            //     path: '/pages/view-customer',
+            //     iconText: 'VC',
+            // },
+            // {
+            //     name: 'Master Item Service',
+            //     path: '/pages/new-customer',
+            //     iconText: 'NC',
+            // },
+        ],
+    },
+    {
+        name: 'Reports',
+        icon: 'description',
+        children: [
+            {
+                name: 'Report Average Weight',
+                path: '/pages/customer-list',
+                iconText: 'CL',
+            },
+           
+        ],
+    },
+    {
+        name: 'Account',
+        icon: 'vpn_key',
+        children: [
+            {
+                name: 'Change Password',
                 path: '/pages/customer-list',
                 iconText: 'CL',
             },
             {
-                name: 'Master Vehicle',
+                name: 'Sign Out',
                 path: '/pages/view-customer',
                 iconText: 'VC',
             },
-            {
-                name: 'Master Supplier',
-                path: '/pages/view-customer',
-                iconText: 'VC',
-            },
-            {
-                name: 'Master Item Service',
-                path: '/pages/new-customer',
-                iconText: 'NC',
-            },
+           
         ],
     },
     {
@@ -526,11 +555,11 @@ export const navigations = [
                 path: '/charts/echarts',
                 iconText: 'E',
             },
-            // {
-            //   name: "Recharts",
-            //   path: "/charts/recharts",
-            //   iconText: "R",
-            // },
+            {
+              name: "Recharts",
+              path: "/charts/recharts",
+              iconText: "R",
+            },
             {
                 name: 'React Vis',
                 path: '/charts/react-vis',
@@ -543,10 +572,5 @@ export const navigations = [
             },
         ],
     },
-    {
-        name: 'Documentation',
-        icon: 'launch',
-        type: 'extLink',
-        path: 'http://demos.ui-lib.com/matx-react-doc/',
-    },
+
 ]

@@ -2,6 +2,8 @@ import FirebaseLogin from './login/FirebaseLogin'
 import NotFound from './NotFound'
 import ForgotPassword from './ForgotPassword'
 import FirebaseRegister from './register/FirebaseRegister'
+import Auth0Login from './login/Auth0Login'
+import JwtLogin from './login/JwtLogin'
 
 const sessionRoutes = [
     {

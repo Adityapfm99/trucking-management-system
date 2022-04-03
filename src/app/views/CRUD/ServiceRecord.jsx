@@ -38,141 +38,105 @@ const VehicleList = [
     {
         vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR A',
         licensePlate: 'B 7710 QWE',
-        year: '2015',
-        status: 'Rent',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        serviceDate: '2022-04-02',
+        cost: '3.300.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
     },
     {
         vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR B',
-        licensePlate: 'B 7921 IOP',
-        year: '2013',
-        status: 'Own',
-        isActive: 'maintenance',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '1.230.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
     },
     {
         vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7121 GHB',
-        year: '2013',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '500.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
     },
     {
         vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7001 GWO',
-        year: '2013',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
-    },
-    {
-        vehicleName: 'CANTER',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR E',
-        licensePlate: 'B 7492 HJW',
-        year: '2010',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
-    },
-    {
-        vehicleName: 'GIGA 4X2',
-        vehicleBrand: 'ISUZU',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR F',
-        licensePlate: 'B 7887 IOP',
-        year: '2010',
-        status: 'Own',
-        active: 'active',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '2.200.000',
+        item: 'Routine Service, Engine Belt Replacement',
+        odometer:'SJ0312',
     },
     {
         vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR G',
-        licensePlate: 'B 7201 FGS',
-        year: '2010',
-        status: 'Own',
-        isActive: 'active',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
-    },
-    {
-        vehicleName: 'GIGA 4X2',
-        vehicleBrand: 'ISUZU',
-        licensePlate: 'B 7769 UJI',
-        year: '2002',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '900.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
     },
     {
         vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7013 ULO',
-        year: '2010',
-        isActive: 'active',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '3.000.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
     },
     {
-        vehicleName: 'DYNA',
-        vehicleBrand: 'TOYOTA',
-        licensePlate: 'B 7291 GHW',
-        year: '2010',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
-    },
-    {
-        vehicleName: 'CANTER',
+        vehicleName: 'FUSO',
         vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7772 HUK',
-        year: '2010',
-        isActive: 'maintenance',
-        status: 'Rent',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '540.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
+    },
+    {
+        vehicleName: 'FUSO',
+        vehicleBrand: 'MITSUBISHI',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '800.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
+    },
+    {
+        vehicleName: 'FUSO',
+        vehicleBrand: 'MITSUBISHI',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '1.200.000',
+        item: 'Routine Service, Spark Plug Replacement',
+        odometer:'SJ0312',
+    },
+    {
+        vehicleName: 'FUSO',
+        vehicleBrand: 'MITSUBISHI',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '2.000.000',
+        item: 'Routine Service, Battery Replacement',
+        odometer:'SJ0312',
+    },
+    {
+        vehicleName: 'FUSO',
+        vehicleBrand: 'MITSUBISHI',
+        licensePlate: 'B 7710 QWE',
+        serviceDate: '2022-04-02',
+        cost: '900.000',
+        item: 'Routine Service, Tire Replacement',
+        odometer:'SJ0312',
     },
 ]
 
-const MasterDriver = () => {
+const ServiceRecord = () => {
     const [uid, setUid] = useState(null)
     const [rowsPerPage, setRowsPerPage] = useState(10)
     const [page, setPage] = useState(0)
@@ -220,17 +184,17 @@ const MasterDriver = () => {
     return (
         <div className="m-sm-30">
             <div className="mb-sm-30">
-                <Breadcrumb routeSegments={[{ name: 'Master Vehicle' }]} />
+                <Breadcrumb routeSegments={[{ name: 'Service Record' }]} />
             </div>
 
 
-            <Link to="/add-vehicle">
+            <Link to="/add-service-record">
                 <Button
                     className="mb-4"
                     variant="contained"
                     color="primary"
                 >
-                    Add New Vehicle
+                    Add New Service Record
                 </Button>
             </Link>
 
@@ -246,13 +210,11 @@ const MasterDriver = () => {
                             <TableCell>Vehicle Brand</TableCell>
                             <TableCell>Vehicle Name</TableCell>
                             <TableCell>License Plate</TableCell>
-                            <TableCell>Vehicle Status</TableCell>
-                            <TableCell>Vehicle year</TableCell>
-                            <TableCell>Sensor Tank</TableCell>
-                            <TableCell>Sensor Fuel</TableCell>
-                            <TableCell>Sensor Load</TableCell>
-                            <TableCell>Status Vehicle</TableCell>
-                            <TableCell>Action</TableCell>
+                            <TableCell>ServiceDate</TableCell>
+                            <TableCell>Cost</TableCell>
+                            
+                            <TableCell>Odometer</TableCell>
+                            <TableCell>Item</TableCell>
                         </TableRow>
                     </TableHead>
                    
@@ -274,22 +236,20 @@ const MasterDriver = () => {
                                         {vehicle.licensePlate}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.status}
+                                        {vehicle.serviceDate}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.year}
+                                        {vehicle.cost}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.sensorTank}
+                                        {vehicle.odometer}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.sensorFuel}
+                                        {vehicle.item}
                                     </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorLoad}
-                                    </TableCell>
+                                   
 
-                                    <TableCell className="px-0">
+                                    {/* <TableCell className="px-0">
                                         {vehicle.isActive ? (
                                             <small className="capitalize text-white bg-green border-radius-4 px-2 py-2px">
                                                 active
@@ -299,23 +259,17 @@ const MasterDriver = () => {
                                                 maintenance
                                             </small>
                                         )}
-                                    </TableCell>
-                                    <TableCell className="px-0 border-none">
+                                    </TableCell> */}
+                                    <TableCell className="px-0 border-none" align="center">
                                         <IconButton
                                             onClick={() => {
                                                 setUid(driver.id)
                                                 setShouldOpenEditorDialog(true)
                                             }}
                                         >
-                                            <Icon color="primary">edit</Icon>
+                                            <Icon color="primary">visibility</Icon>
                                         </IconButton>
-                                        <IconButton
-                                            onClick={() =>
-                                                handleDeleteUser(driver)
-                                            }
-                                        >
-                                            <Icon color="error">delete</Icon>
-                                        </IconButton>
+                                        
                                     </TableCell>
                                 </TableRow>
                             ))}
@@ -361,5 +315,5 @@ const MasterDriver = () => {
     )
 }
 
-export default MasterDriver
+export default ServiceRecord
 

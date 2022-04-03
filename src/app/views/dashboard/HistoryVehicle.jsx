@@ -4,6 +4,8 @@ import { format } from 'date-fns'
 import { Breadcrumb } from 'app/components'
 import MUIDataTable from 'mui-datatables'
 import { Link } from 'react-router-dom'
+import HistoryVehicleChart from '../../../app/views/dashboard/shared/HistoryVehicleChart'
+import VehicleSingleMap from '../CRUD/vehicleSingleMap'
 
 const historyList = [
     {
@@ -225,15 +227,20 @@ const HistoryTable = () => {
     return (
         <div className="m-sm-30">
             <div className="mb-sm-30">
+                
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Pages', path: '/pages' },
                         { name: 'History Vehicle' },
                     ]}
                 />
+             
             </div>
             <div className="overflow-auto">
+           
                 <div className="min-w-750">
+                {/* <HistoryVehicleChart height={200} /> */}
+                <VehicleSingleMap height={200}  width={10}/>
                     <MUIDataTable
                         title={'Vehicle B 7710 QWE - 2022-04-01'}
                         
@@ -289,6 +296,7 @@ const HistoryTable = () => {
                             },
                         }}
                     />
+                    
                 </div>
             </div>
         </div>

@@ -1,6 +1,8 @@
 import axios from 'axios'
 
 export const GET_PRODUCT_LIST = 'GET_PRODUCT_LIST'
+
+export const GET_ITEM_LIST = 'GET_ITEM_LIST'
 export const GET_CART_LIST = 'GET_CART_LIST'
 export const GET_CATEGORY_LIST = 'GET_CATEGORY_LIST'
 export const GET_RATING_LIST = 'GET_RATING_LIST'
@@ -15,6 +17,14 @@ export const getProductList = () => (dispatch) => {
     axios.get('/api/ecommerce/get-product-list').then((res) => {
         dispatch({
             type: GET_PRODUCT_LIST,
+            payload: res.data,
+        })
+    })
+}
+export const getItemList = () => (dispatch) => {
+    axios.get('/api/ecommerce/get-item-list').then((res) => {
+        dispatch({
+            type: GET_ITEM_LIST,
             payload: res.data,
         })
     })

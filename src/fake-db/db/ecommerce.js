@@ -5,6 +5,64 @@ const EcommerceDB = {
     productList: [
         {
             id: '323sa680b32497dsfdsgga21rt47',
+            price: 500000.0,
+            totalUnit: 100,
+            title: 'Routine Service',
+            
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            price: 750000.0,
+            totalUnit: 100,
+            title: 'Transmission Filter Replacement',
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Water Pump Replacement',
+            price: 800000.0,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Spark Plug Replacement',
+            price: 600000.0,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Air Filter Replacement',
+            price: 250000.0,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Ball Joint Replacement',
+            price: 250000.0,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Battery Replacement',
+            price: 1250000.0,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Brake Pad(s) Replacement',
+            price: 2500000.0,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            totalUnit: 100,
+            title: 'Engine Belt Inspection',
+            price: 650000.0,
+        },
+       
+    ],
+    itemList: [
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
             imgUrl: '/assets/images/products/speaker-1.jpg',
             price: 324.0,
             totalUnit: 100,
@@ -160,6 +218,89 @@ const EcommerceDB = {
             description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
         },
     ],
+    
+    itemList1 : [
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'service',
+            title: 'Routine Service',
+            price: 500000.0,
+            totalUnit: 100,
+          
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'sparepart',
+            title: 'Transmission Filter Replacement',
+            price: 750000.0,
+            totalUnit: 100,
+            
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Water Pump Replacement',
+            price: 800000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Spark Plug Replacement',
+            price: 600000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Air Filter Replacement',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Ball Joint Replacement',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Battery Replacement',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Brake Pad(s) Replacement',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Engine Belt Inspection',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            title: 'Exhaust Manifold Replacement',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+        {
+            id: '323sa680b32497dsfdsgga21rt47',
+            category: 'MITSUBISHI, CANTER',
+            name: 'Intake Manifold Gasket Replacement',
+            price: 250000.0,
+            totalUnit: 100,
+        },
+    ],
+    
 
     category: [
         {
@@ -281,6 +422,10 @@ const getDetailedCartList = (uid) => {
 
 Mock.onGet('/api/ecommerce/get-product-list').reply((config) => {
     const response = EcommerceDB.productList
+    return [200, response]
+})
+Mock.onGet('/api/ecommerce/get-item-list').reply((config) => {
+    const response = EcommerceDB.productList2
     return [200, response]
 })
 

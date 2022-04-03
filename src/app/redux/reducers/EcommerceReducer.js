@@ -1,5 +1,6 @@
 import {
     GET_PRODUCT_LIST,
+    GET_ITEM_LIST,
     GET_CART_LIST,
     ADD_PRODUCT_TO_CART,
     DELETE_PRODUCT_FROM_CART,
@@ -11,6 +12,7 @@ import {
 
 const initialState = {
     productList: [],
+    itemList: [],
     cartList: [],
 }
 
@@ -20,6 +22,12 @@ const EcommerceReducer = function (state = initialState, action) {
             return {
                 ...state,
                 productList: [...action.payload],
+            }
+        }
+        case GET_ITEM_LIST: {
+            return {
+                ...state,
+                itemList: [...action.payload],
             }
         }
         case GET_CATEGORY_LIST: {

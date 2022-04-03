@@ -34,145 +34,55 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
         },
     },
 }))
-const VehicleList = [
+const ItemServiceList = [
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR A',
-        licensePlate: 'B 7710 QWE',
-        year: '2015',
-        status: 'Rent',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'service',
+        name: 'Routine Service',
+      
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR B',
-        licensePlate: 'B 7921 IOP',
-        year: '2013',
-        status: 'Own',
-        isActive: 'maintenance',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'sparepart',
+        name: 'Transmission Filter Replacementt',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7121 GHB',
-        year: '2013',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Water Pump Replacement',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7001 GWO',
-        year: '2013',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Spark Plug Replacement',
     },
     {
-        vehicleName: 'CANTER',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR E',
-        licensePlate: 'B 7492 HJW',
-        year: '2010',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Air Filter Replacement',
     },
     {
-        vehicleName: 'GIGA 4X2',
-        vehicleBrand: 'ISUZU',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR F',
-        licensePlate: 'B 7887 IOP',
-        year: '2010',
-        status: 'Own',
-        active: 'active',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Ball Joint Replacement',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR G',
-        licensePlate: 'B 7201 FGS',
-        year: '2010',
-        status: 'Own',
-        isActive: 'active',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Battery Replacement',
     },
     {
-        vehicleName: 'GIGA 4X2',
-        vehicleBrand: 'ISUZU',
-        licensePlate: 'B 7769 UJI',
-        year: '2002',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Brake Pad(s) Replacement',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7013 ULO',
-        year: '2010',
-        isActive: 'active',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Engine Belt Inspection',
     },
     {
-        vehicleName: 'DYNA',
-        vehicleBrand: 'TOYOTA',
-        licensePlate: 'B 7291 GHW',
-        year: '2010',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Exhaust Manifold Replacement',
     },
     {
-        vehicleName: 'CANTER',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7772 HUK',
-        year: '2010',
-        isActive: 'maintenance',
-        status: 'Rent',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        category: 'MITSUBISHI, CANTER',
+        name: 'Intake Manifold Gasket Replacement',
     },
 ]
 
-const MasterDriver = () => {
+const MasterItemService = () => {
     const [uid, setUid] = useState(null)
     const [rowsPerPage, setRowsPerPage] = useState(10)
     const [page, setPage] = useState(0)
@@ -220,17 +130,17 @@ const MasterDriver = () => {
     return (
         <div className="m-sm-30">
             <div className="mb-sm-30">
-                <Breadcrumb routeSegments={[{ name: 'Master Vehicle' }]} />
+                <Breadcrumb routeSegments={[{ name: 'Master Driver' }]} />
             </div>
 
 
-            <Link to="/add-vehicle">
+            <Link to="/add-item">
                 <Button
                     className="mb-4"
                     variant="contained"
                     color="primary"
                 >
-                    Add New Vehicle
+                    Add New Item
                 </Button>
             </Link>
 
@@ -243,60 +153,31 @@ const MasterDriver = () => {
                 >
                     <TableHead>
                         <TableRow>
-                            <TableCell>Vehicle Brand</TableCell>
-                            <TableCell>Vehicle Name</TableCell>
-                            <TableCell>License Plate</TableCell>
-                            <TableCell>Vehicle Status</TableCell>
-                            <TableCell>Vehicle year</TableCell>
-                            <TableCell>Sensor Tank</TableCell>
-                            <TableCell>Sensor Fuel</TableCell>
-                            <TableCell>Sensor Load</TableCell>
-                            <TableCell>Status Vehicle</TableCell>
-                            <TableCell>Action</TableCell>
+                            <TableCell>Item Name</TableCell>
+                           
                         </TableRow>
                     </TableHead>
-                   
                     <TableBody>
-                        {VehicleList
+                        {ItemServiceList
                             ?.slice(
                                 page * rowsPerPage,
                                 page * rowsPerPage + rowsPerPage
                             )
-                            .map((vehicle, index) => (
+                            .map((driver, index) => (
                                 <TableRow hover key={shortid.generate()}>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.vehicleBrand}
+                                        {driver.name}
                                     </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.vehicleName}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.licensePlate}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.status}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.year}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorTank}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorFuel}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorLoad}
-                                    </TableCell>
+                                    
 
                                     <TableCell className="px-0">
-                                        {vehicle.isActive ? (
+                                        {driver.isActive ? (
                                             <small className="capitalize text-white bg-green border-radius-4 px-2 py-2px">
                                                 active
                                             </small>
                                         ) : (
-                                            <small className="capitalize text-white bg-secondary border-radius-4 px-2 py-2px">
-                                                maintenance
+                                            <small className="capitalize text-white bg-error border-radius-4 px-2 py-2px">
+                                                inactive
                                             </small>
                                         )}
                                     </TableCell>
@@ -326,7 +207,7 @@ const MasterDriver = () => {
                     className="px-4"
                     rowsPerPageOptions={[5, 10, 25]}
                     component="div"
-                    count={VehicleList?.length}
+                    count={ItemServiceList?.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     backIconButtonProps={{
@@ -361,5 +242,5 @@ const MasterDriver = () => {
     )
 }
 
-export default MasterDriver
+export default MasterItemService
 

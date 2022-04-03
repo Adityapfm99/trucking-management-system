@@ -90,8 +90,7 @@ const FirebaseLogin = () => {
         remember: true,
     })
     const [message, setMessage] = useState('')
-    const { signInWithEmailAndPassword, signInWithGoogle } = useAuth()
-    const { login } = useAuth()
+    const { createUserWithEmailAndPassword, signInWithGoogle, login } = useAuth()
     const classes = useStyles()
 
     const handleChange = ({ target: { name, value } }) => {

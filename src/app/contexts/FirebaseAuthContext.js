@@ -38,6 +38,7 @@ const AuthContext = createContext({
     createUserWithEmailAndPassword: () => Promise.resolve(),
     signInWithEmailAndPassword: () => Promise.resolve(),
     signInWithGoogle: () => Promise.resolve(),
+    login: () => Promise.resolve(),
     logout: () => Promise.resolve(),
 })
 
@@ -60,6 +61,10 @@ export const AuthProvider = ({ children }) => {
 
     const logout = () => {
         return firebase.auth().signOut()
+    }
+    const login = (email) => {
+        const provider = new firebase.auth.displayName()
+        return firebase.auth().signInWithPopup(provider)
     }
 
     useEffect(() => {
@@ -104,6 +109,7 @@ export const AuthProvider = ({ children }) => {
                 signInWithEmailAndPassword,
                 signInWithGoogle,
                 logout,
+                login,
             }}
         >
             {children}

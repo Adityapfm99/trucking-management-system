@@ -34,145 +34,88 @@ const useStyles = makeStyles(({ palette, ...theme }) => ({
         },
     },
 }))
-const VehicleList = [
+const SupplierList = [
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR A',
-        licensePlate: 'B 7710 QWE',
-        year: '2015',
-        status: 'Rent',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'AA01',
+        supplierName: 'ASSA',
+        supplierPIC: 'Assa Pic Name',
+        supplierAddress: 'Jl. Jakarta Bogor km 29',
+        supplierPhone: '081292131390',
+  
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR B',
-        licensePlate: 'B 7921 IOP',
-        year: '2013',
-        status: 'Own',
-        isActive: 'maintenance',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'AA02',
+        supplierName: 'MPM RENT',
+        supplierPIC: 'MPM RENT Pic',
+        supplierAddress: 'Jl Pahlawan seribu Serpong',
+        supplierPhone: '081292131390',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7121 GHB',
-        year: '2013',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'AA03',
+        supplierName: 'INDOMOBIL',
+        supplierPIC: 'INDOMOBIL PIC',
+        supplierAddress: 'Jl Gatot Subroto',
+        supplierPhone: '081293913303',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7001 GWO',
-        year: '2013',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'CANTER',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR E',
-        licensePlate: 'B 7492 HJW',
-        year: '2010',
-        status: 'Own',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'GIGA 4X2',
-        vehicleBrand: 'ISUZU',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR F',
-        licensePlate: 'B 7887 IOP',
-        year: '2010',
-        status: 'Own',
-        active: 'active',
-        isActive: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        nik: '354928129366001',
-        pic: 'KOORDINATOR G',
-        licensePlate: 'B 7201 FGS',
-        year: '2010',
-        status: 'Own',
-        isActive: 'active',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'GIGA 4X2',
-        vehicleBrand: 'ISUZU',
-        licensePlate: 'B 7769 UJI',
-        year: '2002',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'FUSO',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7013 ULO',
-        year: '2010',
-        isActive: 'active',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'DYNA',
-        vehicleBrand: 'TOYOTA',
-        licensePlate: 'B 7291 GHW',
-        year: '2010',
-        status: 'Own',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
     {
-        vehicleName: 'CANTER',
-        vehicleBrand: 'MITSUBISHI',
-        licensePlate: 'B 7772 HUK',
-        year: '2010',
-        isActive: 'maintenance',
-        status: 'Rent',
-        active: 'active',
-        sensorFuel:'SJ0312',
-        sensorLoad: 'SL4032',
-        sensorTank: 'ST322',
+        supplierCode: 'FUSO',
+        supplierName: 'MITSUBISHI',
+        supplierPIC: '354928129366001',
+        supplierAddress: 'KOORDINATOR A',
+        supplierPhone: 'B 7710 QWE',
     },
 ]
 
-const MasterDriver = () => {
+const MasterSupplier = () => {
     const [uid, setUid] = useState(null)
     const [rowsPerPage, setRowsPerPage] = useState(10)
     const [page, setPage] = useState(0)
@@ -220,17 +163,17 @@ const MasterDriver = () => {
     return (
         <div className="m-sm-30">
             <div className="mb-sm-30">
-                <Breadcrumb routeSegments={[{ name: 'Master Vehicle' }]} />
+                <Breadcrumb routeSegments={[{ name: 'Master Supplier' }]} />
             </div>
 
 
-            <Link to="/add-vehicle">
+            <Link to="/add-supplier">
                 <Button
                     className="mb-4"
                     variant="contained"
                     color="primary"
                 >
-                    Add New Vehicle
+                    Add New Supplier
                 </Button>
             </Link>
 
@@ -243,60 +186,48 @@ const MasterDriver = () => {
                 >
                     <TableHead>
                         <TableRow>
-                            <TableCell>Vehicle Brand</TableCell>
-                            <TableCell>Vehicle Name</TableCell>
-                            <TableCell>License Plate</TableCell>
-                            <TableCell>Vehicle Status</TableCell>
-                            <TableCell>Vehicle year</TableCell>
-                            <TableCell>Sensor Tank</TableCell>
-                            <TableCell>Sensor Fuel</TableCell>
-                            <TableCell>Sensor Load</TableCell>
-                            <TableCell>Status Vehicle</TableCell>
+                            <TableCell>Supplier Code</TableCell>
+                            <TableCell>Supplier Name</TableCell>
+                            <TableCell>Supplier PIC</TableCell>
+                            <TableCell>Supplier Address</TableCell>
+                            <TableCell>Supplier Phone</TableCell>
                             <TableCell>Action</TableCell>
                         </TableRow>
                     </TableHead>
                    
                     <TableBody>
-                        {VehicleList
+                        {SupplierList
                             ?.slice(
                                 page * rowsPerPage,
                                 page * rowsPerPage + rowsPerPage
                             )
-                            .map((vehicle, index) => (
+                            .map((supplier, index) => (
                                 <TableRow hover key={shortid.generate()}>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.vehicleBrand}
+                                        {supplier.supplierCode}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.vehicleName}
+                                        {supplier.supplierName}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.licensePlate}
+                                        {supplier.supplierPIC}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.status}
+                                        {supplier.supplierAddress}
                                     </TableCell>
                                     <TableCell className="px-0" align="left">
-                                        {vehicle.year}
+                                        {supplier.supplierPhone}
                                     </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorTank}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorFuel}
-                                    </TableCell>
-                                    <TableCell className="px-0" align="left">
-                                        {vehicle.sensorLoad}
-                                    </TableCell>
+                                    
 
                                     <TableCell className="px-0">
-                                        {vehicle.isActive ? (
+                                        {supplier.isActive ? (
                                             <small className="capitalize text-white bg-green border-radius-4 px-2 py-2px">
                                                 active
                                             </small>
                                         ) : (
                                             <small className="capitalize text-white bg-secondary border-radius-4 px-2 py-2px">
-                                                maintenance
+                                                inactive
                                             </small>
                                         )}
                                     </TableCell>
@@ -326,7 +257,7 @@ const MasterDriver = () => {
                     className="px-4"
                     rowsPerPageOptions={[5, 10, 25]}
                     component="div"
-                    count={VehicleList?.length}
+                    count={SupplierList?.length}
                     rowsPerPage={rowsPerPage}
                     page={page}
                     backIconButtonProps={{
@@ -361,5 +292,5 @@ const MasterDriver = () => {
     )
 }
 
-export default MasterDriver
+export default MasterSupplier
 

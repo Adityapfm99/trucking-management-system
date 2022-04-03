@@ -61,7 +61,7 @@ const monitoringVehicleList = [
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
+        vehicleName: 'ISUZU, GIGA 4X2',
         driverName: 'DRIVER G',
         licensePlate: 'B 7201 FGS',
         status: 'active',
@@ -79,7 +79,7 @@ const monitoringVehicleList = [
         lastPosition: 'SPBU 3900 Kalimantan',
     },
     {
-        vehicleName: 'MITSUBISHI, FUSO',
+        vehicleName: 'ISUZU, GIGA 4X2',
         driverName: 'DRIVER I',
         licensePlate: 'B 7013 ULO',
         status: 'active',
@@ -193,16 +193,8 @@ const MonitoringTable = () => {
                 customBodyRenderLite: (dataIndex) => (
                     <div className="flex items-center">
                         {/* <div className="flex-grow"></div> */}
-                        <Link to={`/map`}>
-                        <Tooltip title="Live Location">
-                            <IconButton>
-                                <Icon className="text-red" fontSize="medium">
-                                    location_on
-                                </Icon>
-                            </IconButton>
-                        </Tooltip>
-                        </Link>
-                        <Link to={`/invoice/${monitoringVehicleList[dataIndex]._id}`}>
+                       
+                        <Link to={`/dashboard/video-vehicle`}>
                             <Tooltip title="Video cam">
                                 <IconButton>
                                     <Icon fontSize="medium" color ="primary">
@@ -211,6 +203,8 @@ const MonitoringTable = () => {
                                 </IconButton>
                             </Tooltip>
                         </Link>
+                      
+                        
                         <Link to={`/dashboard/history-vehicle`}>
                             <Tooltip title="History">
                                 <IconButton>
@@ -228,14 +222,14 @@ const MonitoringTable = () => {
 
     return (
         <div className="m-sm-30">
-            <div className="mb-sm-30">
+            {/* <div className="mb-sm-30">
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Pages', path: '/pages' },
                         { name: 'Monitoring Vehicle' },
                     ]}
                 />
-            </div>
+            </div> */}
             <div className="overflow-auto">
                 <div className="min-w-750">
                     <MUIDataTable

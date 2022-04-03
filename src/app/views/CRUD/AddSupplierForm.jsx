@@ -37,14 +37,14 @@ const VehicleForm = () => {
                 <Breadcrumb
                     routeSegments={[
                         { name: 'Pages', path: '/pages' },
-                        { name: 'New Vehicle' },
+                        { name: 'New Supplier' },
                     ]}
                 />
             </div>
 
             <Card elevation={3}>
                 <div className="flex p-4">
-                    <h4 className="m-0">Add a New Vehicle</h4>
+                    <h4 className="m-0">Add a New Supplier</h4>
                 </div>
                 <Divider className="mb-2" />
 
@@ -67,46 +67,39 @@ const VehicleForm = () => {
                         <form className="p-4" onSubmit={handleSubmit}>
                             <Grid container spacing={3} alignItems="center">
                             <Grid item md={2} sm={4} xs={12}>
-                                    Vehicle Brand
+                                    Supplier Code
                                 </Grid>
                                 <Grid item md={10} sm={8} xs={12}>
                                     <div className="flex flex-wrap m--2">
                                         <TextField
                                             className="m-2 min-w-188"
-                                            label="Vehicle Brand"
-                                            name="vehicleBrand"
+                                            label="Supplier Code"
+                                            name="supplierCode"
                                             size="small"
                                             variant="outlined"
-                                            select
-                                            value={values.vehicleBrand || ''}
+                                            
+                                            value={values.supplierCode || ''}
                                             onChange={handleChange}
 
                                         >
-                                            {vehicleBrand.map((item, ind) => (
-                                                <MenuItem
-                                                    value={item}
-                                                    key={item}
-                                                >
-                                                    {item}
-                                                </MenuItem>
-                                            ))}
+                                          
                                         </TextField>
                                        
                                     </div>
                                 </Grid>
                                 <Grid item md={2} sm={4} xs={12}>
-                                    Vehicle Type
+                                    Supplier Name
                                 </Grid>
                                 <Grid item md={10} sm={8} xs={12}>
                                     <div className="flex flex-wrap m--2">
                                         <TextField
                                             className="m-2 min-w-188"
-                                            label="Vehicle Type"
-                                            name="vehicleType"
+                                            label="Supplier Name"
+                                            name="supplierName"
                                             size="small"
                                             variant="outlined"
-                                            select
-                                            value={values.vehicleType || ''}
+                                            
+                                            value={values.supplierName || ''}
                                             onChange={handleChange}
 
                                         >
@@ -124,17 +117,17 @@ const VehicleForm = () => {
                                 </Grid>
 
                                 <Grid item md={2} sm={4} xs={12}>
-                                    License Plate
+                                    Supplier PIC
                                 </Grid>
                                 <Grid item md={10} sm={8} xs={12}>
                                     <div className="flex flex-wrap m--2">
                                         <TextField
                                             className="m-2 min-w-188"
-                                            label="License Plate"
-                                            name="licensePlate"
+                                            label="Supplier PIC"
+                                            name="supplierPic"
                                             size="small"
                                             variant="outlined"
-                                            value={values.licensePlate || ''}
+                                            value={values.supplierPic || ''}
                                             onChange={handleChange}
 
                                         >
@@ -146,18 +139,18 @@ const VehicleForm = () => {
         
 
                                 <Grid item md={2} sm={4} xs={12}>
-                                    Vehicle Year
+                                    Supplier Phone
                                 </Grid>
                                 <Grid item md={10} sm={8} xs={12}>
                                     <div className="flex flex-wrap m--2">
                                         <TextField
                                             className="m-2 min-w-188"
-                                            label="year"
-                                            name="year"
+                                            label="Supplier Phone"
+                                            name="supplierPhone"
                                             size="small"
                                             variant="outlined"
-                                            select
-                                            value={values.year || ''}
+                                            
+                                            value={values.supplierPhone || ''}
                                             onChange={handleChange}
 
                                         >
@@ -177,29 +170,23 @@ const VehicleForm = () => {
                                
 
                                 <Grid item md={2} sm={4} xs={12}>
-                                    Vehicle Status
+                                    Supplier Address
                                 </Grid>
                                 <Grid item md={10} sm={8} xs={12}>
                                     <div className="flex flex-wrap m--2">
                                         <TextField
                                             className="m-2 min-w-188"
-                                            label="Vehicle Status"
-                                            name="vehicleStatus"
+                                            label="Supplier Addres"
+                                            name="supplierAddress"
                                             size="small"
+                                            multiline
                                             variant="outlined"
-                                            select
-                                            value={values.vehicleStatus || ''}
+                                            
+                                            value={values.supplierAddress || ''}
                                             onChange={handleChange}
 
                                         >
-                                            {vehicleStatus.map((item, ind) => (
-                                                <MenuItem
-                                                    value={item}
-                                                    key={item}
-                                                >
-                                                    {item}
-                                                </MenuItem>
-                                            ))}
+                                           
                                         </TextField>
                                        
                                     </div>
@@ -243,42 +230,7 @@ const VehicleForm = () => {
             
                               
                             </Grid>
-                            <Tabs
-                                className="mt-4 mb-6"
-                                value={tabIndex}
-                                onChange={handleTabChange}
-                                indicatorColor="primary"
-                                textColor="primary"
-                            >
-                                {tabList.map((item, ind) => (
-                                    <Tab
-                                        className="capitalize"
-                                        value={ind}
-                                        label={item}
-                                        key={ind}
-                                    />
-                                ))}
-                            </Tabs>
-                            {tabIndex === 0 && (
-                                <OtherDetailsForm
-                                    values={values}
-                                    handleChange={handleChange}
-                                />
-                            )}
-                            {tabIndex === 1 && (
-                                <VehicleDetailForm
-                                    values={values}
-                                    setFieldValue={setFieldValue}
-                                    handleChange={handleChange}
-                                />
-                            )}
-                            {tabIndex === 2 && (
-                                <VehicleDetailForm
-                                    values={values}
-                                    setFieldValue={setFieldValue}
-                                    handleChange={handleChange}
-                                />
-                            )}
+                         
 
                             <div className="mt-6">
                                 <Button

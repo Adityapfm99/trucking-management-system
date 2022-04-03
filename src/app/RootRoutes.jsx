@@ -9,6 +9,7 @@ import chartsRoute from './views/charts/ChartsRoute'
 import dragAndDropRoute from './views/Drag&Drop/DragAndDropRoute'
 import invoiceRoutes from './views/invoice/InvoioceRoutes'
 import calendarRoutes from './views/calendar/CalendarRoutes'
+import serviceReminderRoutes from './views/CRUD/serviceReminder/ServiceReminderRoutes'
 import crudRoute from './views/CRUD/CrudRoutes'
 import inboxRoute from './views/inbox/InboxRoutes'
 import formsRoutes from './views/forms/FormsRoutes'
@@ -28,7 +29,7 @@ const redirectRoute = [
     {
         path: '/',
         exact: true,
-        component: () => <Redirect to="/dashboard/default" />,
+        component: () => <Redirect to="/dashboard/alternative" />,
     },
 ]
 
@@ -45,6 +46,7 @@ const routes = [
     ...chartsRoute,
     ...dragAndDropRoute,
     ...calendarRoutes,
+    ...serviceReminderRoutes,
     ...invoiceRoutes,
     ...crudRoute,
     ...inboxRoute,
