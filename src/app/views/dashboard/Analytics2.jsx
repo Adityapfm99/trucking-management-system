@@ -33,7 +33,7 @@ const Analytics2 = () => {
             {/* <StatCard3 /> */}
 
 
-            <Grid container spacing={3}>
+            {/* <Grid container spacing={3}>
                 <Grid item md={4} xs={12}>
                     <StatCard4 />
                 </Grid>
@@ -44,7 +44,7 @@ const Analytics2 = () => {
                     <FollowerCard />
                     <FollowerCard2 />
                 </Grid>
-            </Grid>
+            </Grid> */}
         </div>
     )
 }
