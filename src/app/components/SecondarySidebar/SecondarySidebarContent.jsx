@@ -1,11 +1,7 @@
 import React from 'react'
-import { IconButton, Icon } from '@material-ui/core'
 import MatxCustomizer from '../MatxCustomizer/MatxCustomizer'
-import ShoppingCart from '../ShoppingCart/ShoppingCart'
 import { makeStyles } from '@material-ui/core/styles'
 import clsx from 'clsx'
-import { ChatHead } from 'app/components'
-import { Chatbox } from 'app/components'
 
 const useStyles = makeStyles(({ palette, ...theme }) => ({
     root: {

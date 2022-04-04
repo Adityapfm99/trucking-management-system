@@ -1,75 +1,12 @@
 import React from 'react'
-import { Grow, Icon, IconButton, TextField, Tooltip } from '@material-ui/core'
-import { format } from 'date-fns'
+import {  Icon, IconButton, Tooltip } from '@material-ui/core'
+
 import { Breadcrumb } from 'app/components'
-import MUIDataTable from 'mui-datatables'
 import { Link } from 'react-router-dom'
 import ReactPlayer from "react-player"
 import VehicleSingleMap from '../CRUD/vehicleSingleMap'
 
 const VideoCamVehicle = () => {
-    const columns = [
-        {
-            name: 'vehicleName',
-            label: 'Vehicle Name.',
-            options: {
-    
-                filter: true,
-            },
-        },
-        {
-            name: 'driverName',
-            label: 'Driver Name',
-            options: {
-                filter: true,
-            },
-        },
-
-        {
-            name: 'historyDate',
-            label: 'History Date',
-            options: {
-                filter: true,
-            },
-        },
-        {
-            name: 'weight',
-            label: 'Weight (kg)',
-            options: {
-                filter: true,
-            },
-        },
-        {
-            name: 'fuel',
-            label: 'Fuel (ltr)',
-            options: {
-                filter: true,
-            },
-        },
-        
-        {
-            name: 'action',
-            label: 'Action',
-            options: {
-                filter: false,
-                customBodyRenderLite: (dataIndex) => (
-                    <div className="flex items-center">
-                        {/* <div className="flex-grow"></div> */}
-                        <Link to={`/dashboard/monitoring-vehicle`}>
-                        <Tooltip title="Back">
-                            <IconButton>
-                                <Icon className="text-red" fontSize="medium" color = "error">
-                                    arrow_back
-                                </Icon>
-                            </IconButton>
-                        </Tooltip>
-                        </Link>
-                        
-                    </div>
-                ),
-            },
-        },
-    ]
 
     return (
         <div className="m-sm-30">

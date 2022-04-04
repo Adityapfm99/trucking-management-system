@@ -1,5 +1,4 @@
 import {
-    Badge,
     Card,
     Divider,
     Fab,
@@ -227,39 +226,6 @@ const projectSummery = [
     {
         title: 'Driver Rank',
         amount: 2,
-    },
-]
-
-const paymentList = [
-    {
-        img: '/assets/images/payment-methods/master-card.png',
-        type: 'Master Card',
-        product: 'Bundled product',
-        amount: 909,
-    },
-    {
-        img: '/assets/images/payment-methods/paypal.png',
-        type: 'Master Card',
-        product: 'Bundled product',
-        amount: 303,
-    },
-    {
-        img: '/assets/images/payment-methods/visa.png',
-        type: 'Paypal',
-        product: 'Bundled product',
-        amount: 330,
-    },
-    {
-        img: '/assets/images/payment-methods/maestro.png',
-        type: 'Paypal',
-        product: 'Bundled product',
-        amount: 909,
-    },
-    {
-        img: '/assets/images/payment-methods/maestro.png',
-        type: 'Master Card',
-        product: 'Bundled product',
-        amount: 909,
     },
 ]
 

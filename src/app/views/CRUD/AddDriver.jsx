@@ -4,18 +4,10 @@ import {
     Button,
     Icon,
     Grid,
-    Radio,
-    RadioGroup,
-    FormControlLabel,
-    Checkbox,
 } from '@material-ui/core'
-import { Link, useParams } from 'react-router-dom'
-import {
-    MuiPickersUtilsProvider,
-    KeyboardDatePicker,
-} from '@material-ui/pickers'
+import { Link } from 'react-router-dom'
+
 import 'date-fns'
-import DateFnsUtils from '@date-io/date-fns'
 import DropdownDriver from './dropDownDriver'
 
 const AddDriver = () => {
@@ -48,9 +40,9 @@ const AddDriver = () => {
         })
     }
 
-    const handleDateChange = (date) => {
-        setState({ ...state, date })
-    }
+    // const handleDateChange = (date) => {
+    //     setState({ ...state, date })
+    // }
 
     const {
         driverName,
@@ -75,7 +67,7 @@ const AddDriver = () => {
                                 onChange={handleChange}
                                 type="text"
                                 name="driverName"
-                                value={state?.driverName}
+                                value={state.driverName}
                             />
                        <TextValidator
                                 className="w-full mb-4"

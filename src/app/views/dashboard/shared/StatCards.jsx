@@ -23,7 +23,7 @@ const StatCards = () => {
                     <div className="flex items-center">
                         <Icon className={classes.icon}>local_gas_station</Icon>
                         <div className="ml-3">
-                            <small className="text-muted">Vehicle Cost</small>
+                            <small className="text-muted">Fuel Cost</small>
                             <h6 className="m-0 mt-1 text-primary font-medium">
                                 IDR 20.000.000
                             </h6>

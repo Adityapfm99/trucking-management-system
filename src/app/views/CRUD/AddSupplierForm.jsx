@@ -10,15 +10,10 @@ import {
     Divider,
     TextField,
     MenuItem,
-    Tabs,
-    Tab,
     Button,
 } from '@material-ui/core'
-import OtherDetailsForm from './OtherDetailsVehicleForm'
-import VehicleDetailForm from './VehicleDetailForm'
 // import ContactPersonForm from './ContactPersonForm'
 import { Breadcrumb } from 'app/components'
-import OtherDetailsVehicleForm from './OtherDetailsVehicleForm'
 
 const VehicleForm = () => {
     const [tabIndex, setTabIndex] = useState(0)
@@ -27,9 +22,9 @@ const VehicleForm = () => {
         console.log(values)
     }
 
-    const handleTabChange = (e, value) => {
-        setTabIndex(value)
-    }
+    // const handleTabChange = (e, value) => {
+    //     setTabIndex(value)
+    // }
 
     return (
         <div className="m-sm-30">
@@ -249,12 +244,10 @@ const VehicleForm = () => {
     )
 }
 
-const vehicleStatus = ['RENTAL', 'OWN']
-const vehicleBrand = ['TOYOYA', 'MITSUBISHI', 'SUZUKI', 'DAIHATSU', 'MERCEDES BENZ']
 const vehicleType = ['DYNA', 'CANTER', 'FUSO', 'HINO']
 
 const vehicleYear = ['2001', '2002', '2003', '2004', '2005','2006', '2007', '2008', '2009', '2010']
-const tabList = ['Other Details', 'Vehicle Detail']
+
 
 const initialValues = {
     customerType: '',

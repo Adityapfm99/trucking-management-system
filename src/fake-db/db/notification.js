@@ -5,40 +5,29 @@ const NotificationDB = {
     list: [
         {
             id: shortId.generate(),
-            heading: 'Message',
-            icon: {
-                name: 'chat',
-                color: 'primary',
-            },
-            timestamp: 1570702802573,
-            title: 'New message from Devid',
-            subtitle: 'Hello, Any progress...',
-            path: 'chat',
-        },
-        {
-            id: shortId.generate(),
-            heading: 'Alert',
+            heading: 'Reminder',
             icon: {
                 name: 'notifications',
-                color: 'error',
+                color: 'primary',
             },
-            timestamp: 1570702702573,
-            title: 'Server overloaded',
-            subtitle: 'Traffice reached 2M',
-            path: 'page-layouts/user-profile',
+            timestamp: 1648828544000,
+            title: 'Vehicle B 7013 ULO will overdue in 5 days',
+            subtitle: 'Service Reminder',
+            // path: 'chat',
         },
         {
             id: shortId.generate(),
-            heading: 'Message',
+            heading: 'Reminder',
             icon: {
-                name: 'chat',
+                name: 'notifications',
                 color: 'primary',
             },
-            timestamp: 1570502502573,
-            title: 'New message from Goustove',
-            subtitle: 'Hello, send me details',
-            path: 'chat',
+            timestamp: 1648569344000,
+            title: 'Vehicle B 7291 GHW will overdue Tommorow',
+            subtitle: 'Service Reminder',
+            // path: 'page-layouts/user-profile',
         },
+       
     ],
 }
 

@@ -1,6 +1,5 @@
 import React from 'react'
-import { TextField, Grid, MenuItem } from '@material-ui/core'
-import { Facebook, Twitter } from '@material-ui/icons'
+import { TextField, Grid } from '@material-ui/core'
 
 const VehicleDetailForm = ({ values, handleChange }) => {
     return (

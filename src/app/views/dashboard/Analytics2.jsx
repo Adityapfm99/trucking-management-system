@@ -1,20 +1,16 @@
 import React from 'react'
 import {
-    Card,
     TextField,
     MenuItem,
-    IconButton,
-    Icon,
+ 
     Grid,
 } from '@material-ui/core'
-import StatCard3 from './shared/StatCard3'
-import ComparisonChart2 from './shared/ComparisonChart2'
 import StatCard4 from './shared/StatCard4'
 import GaugeProgressCard from './shared/GuageProgressCard'
 import FollowerCard from './shared/FollowerCard'
 import FollowerCard2 from './shared/FollowerCard2'
-import StatCards from './shared/StatCards'
-import DoughnutChart from './shared/Doughnut'
+import AverageChart from './shared/averageChart'
+
 
 const Analytics2 = () => {
     return (
@@ -33,28 +29,9 @@ const Analytics2 = () => {
                     <MenuItem value="4">Last Year</MenuItem>
                 </TextField>
             </div>
+            <AverageChart/>
+            {/* <StatCard3 /> */}
 
-            <StatCard3 />
-
-            <Card className="mt-5 mb-6" elevation={3}>
-                <div className=" px-4 py-3 mb-6 flex justify-between items-center bg-light-blue">
-                    <span className="font-medium text-muted">Driver Performance</span>
-                    
-                    <IconButton size="small">
-                        <Icon>more_horiz</Icon>
-                    </IconButton>
-                </div>
-                <Grid container spacing={3}>
-                  
-                    <Grid item lg={8} md={8} sm={12} xs={12}>
-                    <ComparisonChart2 height={200} />
-                </Grid>
-           
-               
-                </Grid>
-                
-               
-            </Card>
 
             <Grid container spacing={3}>
                 <Grid item md={4} xs={12}>

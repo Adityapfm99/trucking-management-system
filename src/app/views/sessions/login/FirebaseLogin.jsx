@@ -90,7 +90,7 @@ const FirebaseLogin = () => {
         remember: true,
     })
     const [message, setMessage] = useState('')
-    const { createUserWithEmailAndPassword, signInWithGoogle, login } = useAuth()
+    const { signInWithGoogle } = useAuth()
     const classes = useStyles()
 
     const handleChange = ({ target: { name, value } }) => {
@@ -122,16 +122,7 @@ const FirebaseLogin = () => {
     //         setLoading(false)
     //     }
     // }
-    const handleGoogleLogin = async (event) => {
-        try {
-            await signInWithGoogle()
-            history.push('/')
-        } catch (e) {
-            setMessage(e.message)
-            setLoading(false)
-            console.log(e)
-        }
-    }
+
     return (
         <div
             className={clsx(

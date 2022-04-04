@@ -1,10 +1,9 @@
 import React from 'react'
 import { Grow, Icon, IconButton, TextField, Tooltip } from '@material-ui/core'
-import { format } from 'date-fns'
+
 import { Breadcrumb } from 'app/components'
 import MUIDataTable from 'mui-datatables'
 import { Link } from 'react-router-dom'
-import HistoryVehicleChart from '../../../app/views/dashboard/shared/HistoryVehicleChart'
 import VehicleSingleMap from '../CRUD/vehicleSingleMap'
 
 const historyList = [

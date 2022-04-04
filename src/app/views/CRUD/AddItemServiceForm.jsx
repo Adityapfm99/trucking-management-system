@@ -10,15 +10,11 @@ import {
     Divider,
     TextField,
     MenuItem,
-    Tabs,
-    Tab,
+
     Button,
 } from '@material-ui/core'
-import OtherDetailsForm from './OtherDetailsVehicleForm'
-import VehicleDetailForm from './VehicleDetailForm'
 // import ContactPersonForm from './ContactPersonForm'
 import { Breadcrumb } from 'app/components'
-import OtherDetailsVehicleForm from './OtherDetailsVehicleForm'
 
 const DriverFormAdd = () => {
     const [tabIndex, setTabIndex] = useState(0)

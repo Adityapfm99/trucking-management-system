@@ -63,7 +63,7 @@ const EventEditorDialog = ({ event = {}, open, handleClose }) => {
             fullWidth={true}
         >
             <div className="flex justify-between items-center pl-4 pr-2 py-2 bg-primary">
-                <h4 className="m-0 text-white">Add Events</h4>
+                <h4 className="m-0 text-white">Add Schedule</h4>
                 <IconButton onClick={handleClose}>
                     <Icon className="text-white">clear</Icon>
                 </IconButton>

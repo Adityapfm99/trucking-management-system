@@ -11,7 +11,7 @@ import {
     Button,
     Card,
 } from '@material-ui/core'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { getAllUser, deleteUser } from './TableService'
 import AddDriver from './AddDriver'
 import { Breadcrumb, ConfirmationDialog } from 'app/components'
@@ -55,7 +55,7 @@ const SupplierList = [
         supplierName: 'INDOMOBIL',
         supplierPIC: 'INDOMOBIL PIC',
         supplierAddress: 'Jl Gatot Subroto',
-        supplierPhone: '081293913303',
+        supplierPhone: 'B 7710 QWE',
     },
     {
         supplierCode: 'FUSO',
@@ -120,7 +120,7 @@ const MasterSupplier = () => {
     const [rowsPerPage, setRowsPerPage] = useState(10)
     const [page, setPage] = useState(0)
     const [driver, setUser] = useState(null)
-    const [userList, setUserList] = useState([])
+    const [ setUserList] = useState([])
     const [shouldOpenEditorDialog, setShouldOpenEditorDialog] = useState(false)
     const [
         shouldOpenConfirmationDialog,

@@ -7,7 +7,6 @@ import {
     TextField,
     MenuItem,
     Button,
-    Icon,
 } from '@material-ui/core'
 import {
     MuiPickersUtilsProvider,
@@ -363,32 +362,12 @@ const InvoiceForm = () => {
     )
 }
 
-const paymentTermList = [
-    'NET 15',
-    'NET 30',
-    'NET 45',
-    'NET 60',
-    'Due end of the month',
-    'Due on receive',
-]
 const vehicle = [
                 'MITUSBUSHI CANTER, B 7031 QWE', 
                 'MITUSBUSHI CANTER, B 7332 TEH', 
                 'MITUSBUSHI FUSO, B 7988 ABC', 
                 'ISUZU GIGA 4X2, B 7988 ABC',
             ]
-
-
-const customerList = [
-    'customer 1',
-    'customer 2',
-    'customer 3',
-    'customer 4',
-    'customer 5',
-    'customer 6',
-    'customer 7',
-    'customer 8',
-]
 
 const initialValues = {
     customerType: '',
